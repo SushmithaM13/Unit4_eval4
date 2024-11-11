@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>PRODUCTS</h1>
+    <input type="text" id="productSearch" placeholder="Search for a product" />
+    <div id="suggestions" class="suggestions-dropdown"></div>
+    
+    <div class="controls">
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter" onchange="applyFilters()">
+            <option value="">All</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Home">Home</option>
+        </select>
+
+        <label for="sortOrder">Sort by:</label>
+        <select id="sortOrder" onchange="applyFilters()">
+            <option value="">Default</option>
+            <option value="priceLowHigh">Price: Low to High</option>
+            <option value="priceHighLow">Price: High to Low</option>
+        </select>
+    </div>
+
+    <section>
+        <h2>Products</h2>
+        <div id="product-list" class="product-list"></div>
+    </section>
+    
+</body>
+</html>
+<script src="./script.js">
+</script>
